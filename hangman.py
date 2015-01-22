@@ -65,6 +65,15 @@ def readWordList():
     words = file.read().split()
     return words
 
+def readScore():
+    file = open('score.txt', 'r')
+    readscore = file.read()
+    return readscore
+
+def writeScore(readScore):
+    file = open('score.txt', 'w')
+    file.write(str(readScore))
+
 def getRandomWord(wordList):
     # This function returns a random string from the passed list of strings.
     wordIndex = random.randint(0, len(wordList) - 1)
@@ -73,7 +82,8 @@ def getRandomWord(wordList):
 def displayBoard(HANGMANPICS, missedLetters, correctLetters, secretWord):
     print(HANGMANPICS[len(missedLetters)])
     print()
-
+   
+    print(readScore())
     print('Missed letters:', end=' ')
     for letter in missedLetters:
         print(letter, end=' ')
@@ -133,12 +143,14 @@ def main():
     gameSucceeded = False
     gameFailed = False
     secretWord = getRandomWord(readWordList())
+    score = 0
 
     while True:
         displayBoard(HANGMANPICS, missedLetters, correctLetters, secretWord)
 
         if gameSucceeded or gameFailed:
             if gameSucceeded:
+                score += 10
                 print('Yes! The secret word is "' + secretWord + '"! You have won!')
             else:
                 print('You have run out of guesses!\nAfter ' + str(len(missedLetters)) + ' missed guesses and ' + str(len(correctLetters)) + ' correct guesses, the word was "' + secretWord + '"')
@@ -152,6 +164,9 @@ def main():
                 secretWord = getRandomWord(readWordList)
                 continue 
             else: 
+                rScore = int(readScore())
+                if(score > rScore)
+		     writeScore(str(score))
                 break
 
         # Let the player type in a letter.
