@@ -1,26 +1,13 @@
 language: python
-<<<<<<< HEAD
-python:
--3.2
--3.3
--3.4
-
-#install:
-#-pop install coverage
-#-pop install python-coveralls
-
-script:
--python3./test.py
-=======
 python: 
- - "3.2"
- - "3.3"
- - "3.4"
+- "3.2"
+- "3.3"
+- "3.4"
 
 # install: 
 # - pip install coverage
 # - pip install python-coveralls
 
 script:
- - python3 ./test.py
->>>>>>> 8a33bd6a4d6b5cbd1855ed2c8d0bd4b72de82ab2
+- python3 ./test.py
+
