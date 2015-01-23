@@ -1,6 +1,5 @@
 __author__ = 'user'
 
-<<<<<<< HEAD
 import unittest
 import hangman
 
