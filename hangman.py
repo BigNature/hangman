@@ -166,7 +166,7 @@ def main():
             else: 
                 rScore = int(readScore())
                 if(score > rScore):
-		     writeScore(str(score))
+		   writeScore(str(score))
                 break
 
         # Let the player type in a letter.
