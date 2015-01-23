@@ -137,7 +137,7 @@ def checkWrongAnswer(missedLetters, secretWord):
             
 def main():
     """Main application entry point."""
-    print('W E L C O M E !!!!')
+    print('W E L C O M E !!!!!')
     missedLetters = ''
     correctLetters = ''
     gameSucceeded = False
@@ -166,7 +166,7 @@ def main():
             else: 
                 rScore = int(readScore())
                 if(score > rScore):
-		             writeScore(str(score))
+                    writeScore(str(score))
                 break
 
         # Let the player type in a letter.
