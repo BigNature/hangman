@@ -165,7 +165,7 @@ def main():
                 continue 
             else: 
                 rScore = int(readScore())
-                if(score > rScore)
+                if(score > rScore):
 		     writeScore(str(score))
                 break
 
